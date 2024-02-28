@@ -1,6 +1,6 @@
 import json
 from connect_to_mongo import connect
-from models_db import Authors, Qoutes
+from models_db import Authors, Quotes
 
 
 def upload_authors_to_json(filename):
@@ -12,7 +12,7 @@ def upload_authors_to_json(filename):
 def upload_quotes_to_json(filename):
     quotes_data = []
 
-    for quote in Qoutes.objects():
+    for quote in Quotes.objects():
         
         quote_dict = {
             "quote": quote.quote,
